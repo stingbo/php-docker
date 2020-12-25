@@ -1,0 +1,14 @@
+[program:horizon]
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/code/project/artisan horizon
+autostart=true
+startsecs=0
+autorestart=true
+startretries=3
+user=root
+redirect_stderr=true
+stderr_logfile=/var/log/supervisor/%(program_name)s_stderr.log
+stderr_logfile_maxbytes=100MB
+stdout_logfile=/var/log/supervisor/%(program_name)s_stdout.log
+stdout_logfile_maxbytes=100MB
+stdout_logfile_backups=10

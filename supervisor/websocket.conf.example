@@ -1,0 +1,14 @@
+[program:websocket]
+process_name=websocket
+command=php /var/www/code/project/bin/laravels start -i
+numprocs=1
+autostart=true
+autorestart=true
+startretries=3
+user=root
+redirect_stderr=true
+stderr_logfile=/var/log/supervisor/%(program_name)s_stderr.log
+stderr_logfile_maxbytes=100MB
+stdout_logfile=/var/log/supervisor/%(program_name)s_stdout.log
+stdout_logfile_maxbytes=100MB
+stdout_logfile_backups=10

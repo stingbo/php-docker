@@ -1,0 +1,11 @@
+docker-compose.yml
+.env
+.php_cs.cache
+tags
+nohup.out
+/code/*
+!/code/hello.php
+!/code/index.php
+/supervisor/*
+!/supervisor/*.example
+/nginx/conf/conf.d/test*
